@@ -1,10 +1,10 @@
 tests:
   version:
-    assertStdoutEqual: Python 3.9.10
+    assertStdoutEqual: Hi
     
     input:
-      - ""
+      - "Hi"
 
 software:
   python:
-    execute: [python, --version, "[[tests]]"]
+    execute: [python, hello.py, "[[tests]]"]
