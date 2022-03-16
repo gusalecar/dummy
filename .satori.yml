@@ -1,10 +1,8 @@
-tests:
-  version:
-    assertStdoutEqual: Hi
-    
-    input:
-      - "Hi"
+test:
+  assertStdoutEqual: Hi
 
-software:
-  python:
-    execute: [python, hello.py, "[[tests]]"]
+  input:
+    - Hi
+
+  execute:
+    - [python, hello.py, $(input)]
