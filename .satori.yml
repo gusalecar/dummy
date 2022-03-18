@@ -3,6 +3,9 @@ test:
 
   input:
     - Hi
+   
+  install:
+    - [pip, install, -r, requirements.txt]
 
   execute:
     - [python, hello.py, $(input)]
