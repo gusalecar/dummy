@@ -11,9 +11,6 @@ test:
       mutator: radamsa
       mut_qty: 3
     - Maria
-   
-  install:
-    - [pip, install, -r, requirements.txt]
 
   execute:
-    - [python, hello.py, "$(greetings) $(names)"]
+    - [python, hello.py, $(greetings) $(names)]
