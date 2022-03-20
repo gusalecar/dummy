@@ -1,11 +1,16 @@
 test:
   assertStdoutEqual: Hi
 
-  input:
+  greetings:
     - Hi
+    - Hello
+   
+  names:
+    - Juan
+    - Maria
    
   install:
     - [pip, install, -r, requirements.txt]
 
   execute:
-    - [python, hello.py, $(input)]
+    - [python, hello.py, "$(greetings) $(names)"]
