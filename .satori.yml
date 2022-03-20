@@ -6,7 +6,10 @@ test:
     - Hello
    
   names:
-    - Juan
+    - value: Juan
+      mutate: true
+      mutator: radamsa
+      mut_qty: 3
     - Maria
    
   install:
