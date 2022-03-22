@@ -7,9 +7,8 @@ test:
    
   names:
     - value: Juan
-      mutate: true
-      mutator: radamsa
-      mut_qty: 3
+      mutate: radamsa
+      mutate_qty: 3
     - Maria
 
   execute:
