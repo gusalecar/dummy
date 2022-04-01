@@ -1,15 +1,12 @@
-test:
-  assertStdoutEqual: Hi
-
-  greetings:
-    - Hi
-    - Hello
-   
-  names:
-    - value: Juan
-      mutate: radamsa
-      mutate_qty: 3
-    - Maria
-
+tests:
+  assertStdoutEqual: ""
+  host:
+    - www.uflow.biz
+  install:
+    - [apt update]
+    - [apt -y install testssl.sh]
+    - [echo "testssl -oC output.csv $1" > test.sh]
+    - [echo "grep 'LOW|MEDIUM|HIGH|CRITICAL' output.csv" >> test.sh]
+    - [chmod 700 test.sh]
   execute:
-    - [python, hello.py, $(greetings) $(names)]
+    - [./test.sh $(host)]
